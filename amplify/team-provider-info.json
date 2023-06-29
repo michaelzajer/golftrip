@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-golftrip-dev-170309-authRole",
+      "UnauthRoleArn": "arn:aws:iam::076063555280:role/amplify-golftrip-dev-170309-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::076063555280:role/amplify-golftrip-dev-170309-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-golftrip-dev-170309-deployment",
+      "UnauthRoleName": "amplify-golftrip-dev-170309-unauthRole",
+      "StackName": "amplify-golftrip-dev-170309",
+      "StackId": "arn:aws:cloudformation:us-east-1:076063555280:stack/amplify-golftrip-dev-170309/03aa8850-164b-11ee-8458-0ec627c350bb",
+      "AmplifyAppId": "d13gcz56u04nfr"
+    },
+    "categories": {
+      "api": {
+        "golftrip": {}
+      }
+    }
+  }
+}

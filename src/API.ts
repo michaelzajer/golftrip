@@ -77,12 +77,12 @@ export type DeleteTodoInput = {
 
 export type CreateGolferInput = {
   id?: string | null,
-  name: string,
+  golfername: string,
   mobile?: string | null,
 };
 
 export type ModelGolferConditionInput = {
-  name?: ModelStringInput | null,
+  golfername?: ModelStringInput | null,
   mobile?: ModelStringInput | null,
   and?: Array< ModelGolferConditionInput | null > | null,
   or?: Array< ModelGolferConditionInput | null > | null,
@@ -92,7 +92,7 @@ export type ModelGolferConditionInput = {
 export type Golfer = {
   __typename: "Golfer",
   id: string,
-  name: string,
+  golfername: string,
   mobile?: string | null,
   createdAt: string,
   updatedAt: string,
@@ -100,7 +100,7 @@ export type Golfer = {
 
 export type UpdateGolferInput = {
   id: string,
-  name?: string | null,
+  golfername?: string | null,
   mobile?: string | null,
 };
 
@@ -141,7 +141,7 @@ export type ModelTodoConnection = {
 
 export type ModelGolferFilterInput = {
   id?: ModelIDInput | null,
-  name?: ModelStringInput | null,
+  golfername?: ModelStringInput | null,
   mobile?: ModelStringInput | null,
   and?: Array< ModelGolferFilterInput | null > | null,
   or?: Array< ModelGolferFilterInput | null > | null,
@@ -194,7 +194,7 @@ export type ModelSubscriptionStringInput = {
 
 export type ModelSubscriptionGolferFilterInput = {
   id?: ModelSubscriptionIDInput | null,
-  name?: ModelSubscriptionStringInput | null,
+  golfername?: ModelSubscriptionStringInput | null,
   mobile?: ModelSubscriptionStringInput | null,
   and?: Array< ModelSubscriptionGolferFilterInput | null > | null,
   or?: Array< ModelSubscriptionGolferFilterInput | null > | null,
@@ -257,7 +257,7 @@ export type CreateGolferMutation = {
   createGolfer?:  {
     __typename: "Golfer",
     id: string,
-    name: string,
+    golfername: string,
     mobile?: string | null,
     createdAt: string,
     updatedAt: string,
@@ -273,7 +273,7 @@ export type UpdateGolferMutation = {
   updateGolfer?:  {
     __typename: "Golfer",
     id: string,
-    name: string,
+    golfername: string,
     mobile?: string | null,
     createdAt: string,
     updatedAt: string,
@@ -289,7 +289,7 @@ export type DeleteGolferMutation = {
   deleteGolfer?:  {
     __typename: "Golfer",
     id: string,
-    name: string,
+    golfername: string,
     mobile?: string | null,
     createdAt: string,
     updatedAt: string,
@@ -340,7 +340,7 @@ export type GetGolferQuery = {
   getGolfer?:  {
     __typename: "Golfer",
     id: string,
-    name: string,
+    golfername: string,
     mobile?: string | null,
     createdAt: string,
     updatedAt: string,
@@ -359,7 +359,7 @@ export type ListGolfersQuery = {
     items:  Array< {
       __typename: "Golfer",
       id: string,
-      name: string,
+      golfername: string,
       mobile?: string | null,
       createdAt: string,
       updatedAt: string,
@@ -421,7 +421,7 @@ export type OnCreateGolferSubscription = {
   onCreateGolfer?:  {
     __typename: "Golfer",
     id: string,
-    name: string,
+    golfername: string,
     mobile?: string | null,
     createdAt: string,
     updatedAt: string,
@@ -436,7 +436,7 @@ export type OnUpdateGolferSubscription = {
   onUpdateGolfer?:  {
     __typename: "Golfer",
     id: string,
-    name: string,
+    golfername: string,
     mobile?: string | null,
     createdAt: string,
     updatedAt: string,
@@ -451,7 +451,7 @@ export type OnDeleteGolferSubscription = {
   onDeleteGolfer?:  {
     __typename: "Golfer",
     id: string,
-    name: string,
+    golfername: string,
     mobile?: string | null,
     createdAt: string,
     updatedAt: string,

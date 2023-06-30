@@ -38,7 +38,7 @@ export const getGolfer = /* GraphQL */ `
   query GetGolfer($id: ID!) {
     getGolfer(id: $id) {
       id
-      name
+      golfername
       mobile
       createdAt
       updatedAt
@@ -55,7 +55,7 @@ export const listGolfers = /* GraphQL */ `
     listGolfers(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
+        golfername
         mobile
         createdAt
         updatedAt

@@ -42,7 +42,7 @@ export const onCreateGolfer = /* GraphQL */ `
   subscription OnCreateGolfer($filter: ModelSubscriptionGolferFilterInput) {
     onCreateGolfer(filter: $filter) {
       id
-      name
+      golfername
       mobile
       createdAt
       updatedAt
@@ -54,7 +54,7 @@ export const onUpdateGolfer = /* GraphQL */ `
   subscription OnUpdateGolfer($filter: ModelSubscriptionGolferFilterInput) {
     onUpdateGolfer(filter: $filter) {
       id
-      name
+      golfername
       mobile
       createdAt
       updatedAt
@@ -66,7 +66,7 @@ export const onDeleteGolfer = /* GraphQL */ `
   subscription OnDeleteGolfer($filter: ModelSubscriptionGolferFilterInput) {
     onDeleteGolfer(filter: $filter) {
       id
-      name
+      golfername
       mobile
       createdAt
       updatedAt

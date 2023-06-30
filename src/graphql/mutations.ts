@@ -54,7 +54,7 @@ export const createGolfer = /* GraphQL */ `
   ) {
     createGolfer(input: $input, condition: $condition) {
       id
-      name
+      golfername
       mobile
       createdAt
       updatedAt
@@ -69,7 +69,7 @@ export const updateGolfer = /* GraphQL */ `
   ) {
     updateGolfer(input: $input, condition: $condition) {
       id
-      name
+      golfername
       mobile
       createdAt
       updatedAt
@@ -84,7 +84,7 @@ export const deleteGolfer = /* GraphQL */ `
   ) {
     deleteGolfer(input: $input, condition: $condition) {
       id
-      name
+      golfername
       mobile
       createdAt
       updatedAt

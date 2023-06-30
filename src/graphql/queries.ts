@@ -34,3 +34,35 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
+export const getGolfer = /* GraphQL */ `
+  query GetGolfer($id: ID!) {
+    getGolfer(id: $id) {
+      id
+      name
+      mobile
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listGolfers = /* GraphQL */ `
+  query ListGolfers(
+    $filter: ModelGolferFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listGolfers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        mobile
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;

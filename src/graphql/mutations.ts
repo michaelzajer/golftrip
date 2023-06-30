@@ -47,3 +47,48 @@ export const deleteTodo = /* GraphQL */ `
     }
   }
 `;
+export const createGolfer = /* GraphQL */ `
+  mutation CreateGolfer(
+    $input: CreateGolferInput!
+    $condition: ModelGolferConditionInput
+  ) {
+    createGolfer(input: $input, condition: $condition) {
+      id
+      name
+      mobile
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateGolfer = /* GraphQL */ `
+  mutation UpdateGolfer(
+    $input: UpdateGolferInput!
+    $condition: ModelGolferConditionInput
+  ) {
+    updateGolfer(input: $input, condition: $condition) {
+      id
+      name
+      mobile
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteGolfer = /* GraphQL */ `
+  mutation DeleteGolfer(
+    $input: DeleteGolferInput!
+    $condition: ModelGolferConditionInput
+  ) {
+    deleteGolfer(input: $input, condition: $condition) {
+      id
+      name
+      mobile
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;

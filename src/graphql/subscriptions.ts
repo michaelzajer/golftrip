@@ -38,3 +38,39 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
+export const onCreateGolfer = /* GraphQL */ `
+  subscription OnCreateGolfer($filter: ModelSubscriptionGolferFilterInput) {
+    onCreateGolfer(filter: $filter) {
+      id
+      name
+      mobile
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateGolfer = /* GraphQL */ `
+  subscription OnUpdateGolfer($filter: ModelSubscriptionGolferFilterInput) {
+    onUpdateGolfer(filter: $filter) {
+      id
+      name
+      mobile
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteGolfer = /* GraphQL */ `
+  subscription OnDeleteGolfer($filter: ModelSubscriptionGolferFilterInput) {
+    onDeleteGolfer(filter: $filter) {
+      id
+      name
+      mobile
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;

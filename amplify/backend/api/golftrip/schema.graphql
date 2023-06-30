@@ -10,6 +10,6 @@ type Todo @model {
 
 type Golfer @model {
   id: ID!
-  name: String!
+  golfername: String!
   mobile: String
 }

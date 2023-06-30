@@ -52,16 +52,16 @@ const App = () => {
         placeholder="Name"
       />
       <input
-        onChange={event => setInput('description', event.target.value)}
+        onChange={event => setInput('mobile', event.target.value)}
         value={formState.mobile}
-        placeholder="MObile"
+        placeholder="Mobile"
       />
       <button onClick={addGolfer}>Create Golfer</button>
       {
         golfers.map((golfer: any, index: any) => (
           <div key={golfer.id ? golfer.id : index} className="golfer">
             <p className="golferName">{golfer.name}</p>
-            <p className="golferDescription">{golfer.mobile}</p>
+            <p className="golferMobile">{golfer.mobile}</p>
           </div>
         ))
       }

@@ -75,6 +75,39 @@ export type DeleteTodoInput = {
   id: string,
 };
 
+export type CreateGolferInput = {
+  id?: string | null,
+  name: string,
+  mobile?: string | null,
+};
+
+export type ModelGolferConditionInput = {
+  name?: ModelStringInput | null,
+  mobile?: ModelStringInput | null,
+  and?: Array< ModelGolferConditionInput | null > | null,
+  or?: Array< ModelGolferConditionInput | null > | null,
+  not?: ModelGolferConditionInput | null,
+};
+
+export type Golfer = {
+  __typename: "Golfer",
+  id: string,
+  name: string,
+  mobile?: string | null,
+  createdAt: string,
+  updatedAt: string,
+};
+
+export type UpdateGolferInput = {
+  id: string,
+  name?: string | null,
+  mobile?: string | null,
+};
+
+export type DeleteGolferInput = {
+  id: string,
+};
+
 export type ModelTodoFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
@@ -103,6 +136,21 @@ export type ModelIDInput = {
 export type ModelTodoConnection = {
   __typename: "ModelTodoConnection",
   items:  Array<Todo | null >,
+  nextToken?: string | null,
+};
+
+export type ModelGolferFilterInput = {
+  id?: ModelIDInput | null,
+  name?: ModelStringInput | null,
+  mobile?: ModelStringInput | null,
+  and?: Array< ModelGolferFilterInput | null > | null,
+  or?: Array< ModelGolferFilterInput | null > | null,
+  not?: ModelGolferFilterInput | null,
+};
+
+export type ModelGolferConnection = {
+  __typename: "ModelGolferConnection",
+  items:  Array<Golfer | null >,
   nextToken?: string | null,
 };
 
@@ -142,6 +190,14 @@ export type ModelSubscriptionStringInput = {
   beginsWith?: string | null,
   in?: Array< string | null > | null,
   notIn?: Array< string | null > | null,
+};
+
+export type ModelSubscriptionGolferFilterInput = {
+  id?: ModelSubscriptionIDInput | null,
+  name?: ModelSubscriptionStringInput | null,
+  mobile?: ModelSubscriptionStringInput | null,
+  and?: Array< ModelSubscriptionGolferFilterInput | null > | null,
+  or?: Array< ModelSubscriptionGolferFilterInput | null > | null,
 };
 
 export type CreateTodoMutationVariables = {
@@ -192,6 +248,54 @@ export type DeleteTodoMutation = {
   } | null,
 };
 
+export type CreateGolferMutationVariables = {
+  input: CreateGolferInput,
+  condition?: ModelGolferConditionInput | null,
+};
+
+export type CreateGolferMutation = {
+  createGolfer?:  {
+    __typename: "Golfer",
+    id: string,
+    name: string,
+    mobile?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type UpdateGolferMutationVariables = {
+  input: UpdateGolferInput,
+  condition?: ModelGolferConditionInput | null,
+};
+
+export type UpdateGolferMutation = {
+  updateGolfer?:  {
+    __typename: "Golfer",
+    id: string,
+    name: string,
+    mobile?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type DeleteGolferMutationVariables = {
+  input: DeleteGolferInput,
+  condition?: ModelGolferConditionInput | null,
+};
+
+export type DeleteGolferMutation = {
+  deleteGolfer?:  {
+    __typename: "Golfer",
+    id: string,
+    name: string,
+    mobile?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
 export type GetTodoQueryVariables = {
   id: string,
 };
@@ -221,6 +325,42 @@ export type ListTodosQuery = {
       id: string,
       name: string,
       description?: string | null,
+      createdAt: string,
+      updatedAt: string,
+    } | null >,
+    nextToken?: string | null,
+  } | null,
+};
+
+export type GetGolferQueryVariables = {
+  id: string,
+};
+
+export type GetGolferQuery = {
+  getGolfer?:  {
+    __typename: "Golfer",
+    id: string,
+    name: string,
+    mobile?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type ListGolfersQueryVariables = {
+  filter?: ModelGolferFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListGolfersQuery = {
+  listGolfers?:  {
+    __typename: "ModelGolferConnection",
+    items:  Array< {
+      __typename: "Golfer",
+      id: string,
+      name: string,
+      mobile?: string | null,
       createdAt: string,
       updatedAt: string,
     } | null >,
@@ -268,6 +408,51 @@ export type OnDeleteTodoSubscription = {
     id: string,
     name: string,
     description?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnCreateGolferSubscriptionVariables = {
+  filter?: ModelSubscriptionGolferFilterInput | null,
+};
+
+export type OnCreateGolferSubscription = {
+  onCreateGolfer?:  {
+    __typename: "Golfer",
+    id: string,
+    name: string,
+    mobile?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnUpdateGolferSubscriptionVariables = {
+  filter?: ModelSubscriptionGolferFilterInput | null,
+};
+
+export type OnUpdateGolferSubscription = {
+  onUpdateGolfer?:  {
+    __typename: "Golfer",
+    id: string,
+    name: string,
+    mobile?: string | null,
+    createdAt: string,
+    updatedAt: string,
+  } | null,
+};
+
+export type OnDeleteGolferSubscriptionVariables = {
+  filter?: ModelSubscriptionGolferFilterInput | null,
+};
+
+export type OnDeleteGolferSubscription = {
+  onDeleteGolfer?:  {
+    __typename: "Golfer",
+    id: string,
+    name: string,
+    mobile?: string | null,
     createdAt: string,
     updatedAt: string,
   } | null,

@@ -11,7 +11,7 @@ import { listGolfers } from './graphql/queries';
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
 
-const initialState = { name: '', description: '', mobile: '', }
+const initialState = { name: '', description: '', golfername: '', mobile: '', }
 const App = () => {
   const [formState, setFormState] = useState(initialState);
   const [todos, setTodos] = useState([]);
@@ -59,7 +59,7 @@ const App = () => {
   }
   const addGolfer = async (): Promise<any> => {
     try {
-      if (!formState.name || !formState.mobile) return;
+      if (!formState.golfername || !formState.mobile) return;
       const golfer = { ...formState };
       setGolfers([...golfers, golfer] as SetStateAction<never[]>);
       setFormState(initialState);
@@ -95,9 +95,9 @@ const App = () => {
 
       <h2>Amplify Golfers</h2>
       <input
-        onChange={event => setInput('name', event.target.value)}
+        onChange={event => setInput('golfername', event.target.value)}
         value={formState.name} 
-        placeholder="Name"
+        placeholder="GolferName"
       />
       <input
         onChange={event => setInput('mobile', event.target.value)}
@@ -108,7 +108,7 @@ const App = () => {
       {
         golfers.map((golfer: any, index: any) => (
           <div key={golfer.id ? golfer.id : index} className="golfer">
-            <p className="golferName">{golfer.name}</p>
+            <p className="golferName">{golfer.golfername}</p>
             <p className="golferMobile">{golfer.mobile}</p>
           </div>
         ))

@@ -96,7 +96,7 @@ const App = () => {
       <h2>Amplify Golfers</h2>
       <input
         onChange={event => setInput('golfername', event.target.value)}
-        value={formState.name} 
+        value={formState.golfername} 
         placeholder="GolferName"
       />
       <input
